@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Buffet</title>
+  <link href="assets/stylesheets/prettify.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="assets/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="assets/js/prettify.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Buffet</h1>
+    <p class="desc">Buffet is <code>website code</code> that you can use to show stuff in a scroller.</p>
+    <div class="demo">
+      <div class="scroll_mask">
+        <ul class="scroll">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <a class="prev">&larr;</a>
+      <a class="next">&rarr;</a>
+      <div class="clear"></div>
+    </div>
+    <h2>Javascript</h2>
+    <pre class="prettyprint">
+$(document).ready(function () {
+  $('#scroll').buffet({
+    scroll_by : 2,
+    speed     : 400,
+    easing    : 'easeOutExpo',
+    next      : $('#next'),
+    prev      : $('#prev')
+  });
+});
+    </pre>
+    <h2>HTML</h2>
+    <pre class="prettyprint">
+&lt;div id=&quot;scroll_mask&quot;&gt;
+  &lt;ul id=&quot;scroll&quot;&gt;
+    &lt;li&gt;..&lt;/li&gt;        
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;        
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;        
+    &lt;li&gt;..&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;a id=&quot;prev&quot;&gt;&lt;/a&gt;
+&lt;a id=&quot;next&quot;&gt;&lt;/a&gt;
+    </pre>
+    <h2>CSS</h2>
+    <pre class="prettyprint">
+#scroll_mask {
+  position:relative;
+  overflow:hidden;
+  width:620px;
+  height:140px;
+  margin:0 auto;
+}
+
+ul#scroll {
+  margin:0;
+  padding:0;
+  position:absolute;
+  width:9999em;
+  height:140px;
+  list-style-type:none;
+
+}
+
+ul#scroll li {
+  float:left;
+  width:140px;
+  height:140px;
+  margin:0 20px 0 0;
+  background-color:pink;
+}
+    </pre>
+  </div> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='assets/jquery.js'>\x3C/script>")</script>
+  <script src="assets/js/jquery.easing.js"></script>
+  <script src="../jquery.buffet.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.scroll').buffet({
+        scroll_by : 2,
+        speed     : 400,
+        easing    : 'easeOutExpo',
+        next      : $('.container .next'),
+        prev      : $('.container .prev')
+      });
+    });  
+    
+    prettyPrint();
+    
+  </script>
+</body>
+</html>
