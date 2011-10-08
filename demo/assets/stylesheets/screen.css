@@ -450,17 +450,17 @@ table {
 }
 
 /* line 33, icons */
-.icons-sprite, .icons-button_next, a.next, .icons-button_prev, a.prev {
+.icons-sprite, .icons-button_next, a#next, .icons-button_prev, a#prev {
   background: url('../images/icons-secb955c53f.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-button_next, a.next {
+.icons-button_next, a#next {
   background-position: 0 0;
 }
 
 /* line 60, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-button_prev, a.prev {
+.icons-button_prev, a#prev {
   background-position: 0 -40px;
 }
 
@@ -478,24 +478,31 @@ body {
   color: #fff;
   text-shadow: black 1px 1px 0px;
   font-family: 'Lucida Grande', sans-serif;
+  border-top: 5px solid #121212;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(33%, #323232));
+  background-image: -webkit-linear-gradient(top, #444444, #323232 33%);
+  background-image: -moz-linear-gradient(top, #444444, #323232 33%);
+  background-image: -o-linear-gradient(top, #444444, #323232 33%);
+  background-image: -ms-linear-gradient(top, #444444, #323232 33%);
+  background-image: linear-gradient(top, #444444, #323232 33%);
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 a {
   color: #FFD48E;
   text-decoration: none;
 }
-/* line 41, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 a:hover {
   color: #fff;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .clear {
   clear: both;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 h1 {
   color: #fff;
   font-family: 'Lobster';
@@ -505,37 +512,80 @@ h1 {
   font-size: 8em;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 h3 {
   text-align: center;
 }
 
-/* line 66, ../sass/screen.scss */
-p.desc {
+/* line 69, ../sass/screen.scss */
+p {
   font-size: 1.2em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2em;
 }
-/* line 71, ../sass/screen.scss */
-p.desc code {
-  background: #121212;
-  padding: 3px 6px;
+
+/* line 82, ../sass/screen.scss */
+a.download,
+a.info {
+  padding: 0.3em 1em;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -o-border-radius: 4px;
   -ms-border-radius: 4px;
   -khtml-border-radius: 4px;
   border-radius: 4px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ee5f5b), color-stop(100%, #c43c35));
+  background-image: -webkit-linear-gradient(top, #ee5f5b 0%, #c43c35 100%);
+  background-image: -moz-linear-gradient(top, #ee5f5b 0%, #c43c35 100%);
+  background-image: -o-linear-gradient(top, #ee5f5b 0%, #c43c35 100%);
+  background-image: -ms-linear-gradient(top, #ee5f5b 0%, #c43c35 100%);
+  background-image: linear-gradient(top, #ee5f5b 0%, #c43c35 100%);
+  color: #fff;
+  border: 1px solid #c43c35;
+}
+/* line 89, ../sass/screen.scss */
+a.download:active,
+a.info:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 95, ../sass/screen.scss */
+a.download:hover,
+a.info:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
+a.info {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #eaeaea));
+  background-image: -webkit-linear-gradient(top, #f7f7f7 0%, #eaeaea 100%);
+  background-image: -moz-linear-gradient(top, #f7f7f7 0%, #eaeaea 100%);
+  background-image: -o-linear-gradient(top, #f7f7f7 0%, #eaeaea 100%);
+  background-image: -ms-linear-gradient(top, #f7f7f7 0%, #eaeaea 100%);
+  background-image: linear-gradient(top, #f7f7f7 0%, #eaeaea 100%);
+  border: 1px solid #fff;
+  color: #232323;
+  text-shadow: none;
+}
+
+/* line 110, ../sass/screen.scss */
+.demo_wrapper {
+  margin-bottom: 40px;
+  padding: 30px 0px;
+  background-color: #232323;
+  border-top: 1px #666 solid;
+  border-bottom: 1px #666 solid;
+}
+
+/* line 120, ../sass/screen.scss */
 .demo {
   position: relative;
-  margin-bottom: 40px;
 }
 
-/* line 84, ../sass/screen.scss */
-.scroll_mask {
+/* line 124, ../sass/screen.scss */
+#scroll_mask {
   position: relative;
   overflow: hidden;
   width: 620px;
@@ -543,8 +593,8 @@ p.desc code {
   height: 140px;
 }
 
-/* line 92, ../sass/screen.scss */
-ul.scroll {
+/* line 132, ../sass/screen.scss */
+ul#scroll {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -552,8 +602,8 @@ ul.scroll {
   width: 9999em;
   list-style-type: none;
 }
-/* line 101, ../sass/screen.scss */
-ul.scroll li {
+/* line 141, ../sass/screen.scss */
+ul#scroll li {
   margin: 0 20px 0 0;
   float: left;
   width: 140px;
@@ -561,9 +611,9 @@ ul.scroll li {
   background-color: #f7f7f7;
 }
 
-/* line 114, ../sass/screen.scss */
-a.prev,
-a.next {
+/* line 153, ../sass/screen.scss */
+a#prev,
+a#next {
   width: 40px;
   height: 40px;
   display: block;
@@ -573,43 +623,43 @@ a.next {
   text-indent: -999em;
   cursor: pointer;
 }
-/* line 124, ../sass/screen.scss */
-a.prev:hover,
-a.next:hover {
+/* line 163, ../sass/screen.scss */
+a#prev:hover,
+a#next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
-/* line 128, ../sass/screen.scss */
-a.prev:active,
-a.next:active {
+/* line 167, ../sass/screen.scss */
+a#prev:active,
+a#next:active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
-/* line 132, ../sass/screen.scss */
-a.prev.inactive,
-a.next.inactive {
+/* line 171, ../sass/screen.scss */
+a#prev.inactive,
+a#next.inactive {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
   opacity: 0.1;
   cursor: arrow;
 }
 
-/* line 139, ../sass/screen.scss */
-a.next {
+/* line 178, ../sass/screen.scss */
+a#next {
   right: -30px;
 }
 
-/* line 144, ../sass/screen.scss */
-a.prev {
+/* line 183, ../sass/screen.scss */
+a#prev {
   left: -30px;
 }
 
-/* line 149, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 pre.prettyprint {
   clear: both;
   margin-left: 2.041%;
   margin-right: 2.041%;
   margin-left: 2.041%;
-  background-color: #121212;
+  background-color: #232323;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   -o-border-radius: 8px;
@@ -618,4 +668,8 @@ pre.prettyprint {
   border-radius: 8px;
   border: 1px #666 solid;
   margin-left: 0px;
+}
+/* line 196, ../sass/screen.scss */
+pre.prettyprint:last-child {
+  margin-bottom: 40px;
 }

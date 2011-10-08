@@ -12,37 +12,43 @@
   <script src="assets/js/prettify.js"></script>
 </head>
 <body>
-  <div class="container">
+<a href="http://github.com/keighl/buffet"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>  <div class="container">
     <h1>Buffet</h1>
     <p class="desc">Buffet is <code>website code</code> that you can use to show stuff in a scroller.</p>
-    <div class="demo">
-      <div class="scroll_mask">
-        <ul class="scroll">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+    <p class="download">
+      <a class="download" href="https://github.com/keighl/buffet/zipball/master">Download</a>
+      &nbsp;
+      <a class="info" href="https://github.com/keighl/buffet">GitHub</a>
+      
+    </p>
+  </div>
+  <div class="demo_wrapper">
+    <div class="demo container">      
+      <div id="scroll_mask">
+        <ul id="scroll">
+          <li><img src="assets/images/dessert.jpg"></li>
+          <li><img src="assets/images/pasta_salad.jpg"></li>
+          <li><img src="assets/images/chicken.jpg"></li>
+          <li><img src="assets/images/crab.jpg"></li>
+          <li><img src="assets/images/general_tsos.jpg"></li>
+          <li><img src="assets/images/fruit.jpg"></li>
+          <li><img src="assets/images/mac_cheese.jpg"></li>
+          <li><img src="assets/images/salad.jpg"></li>
+          <li><img src="assets/images/pasta.jpg"></li>
+          <li><img src="assets/images/cupcakes.jpg"></li>
         </ul>
       </div>
-      <a class="prev">&larr;</a>
-      <a class="next">&rarr;</a>
+      <a id="prev"></a>
+      <a id="next"></a>
       <div class="clear"></div>
     </div>
+  </div>
+  <div class="container">
     <h2>Javascript</h2>
     <pre class="prettyprint">
 $(document).ready(function () {
   $('#scroll').buffet({
     scroll_by : 2,
-    speed     : 400,
-    easing    : 'easeOutExpo',
     next      : $('#next'),
     prev      : $('#prev')
   });
@@ -52,11 +58,17 @@ $(document).ready(function () {
     <pre class="prettyprint">
 &lt;div id=&quot;scroll_mask&quot;&gt;
   &lt;ul id=&quot;scroll&quot;&gt;
-    &lt;li&gt;..&lt;/li&gt;        
     &lt;li&gt;..&lt;/li&gt;
-    &lt;li&gt;..&lt;/li&gt;        
     &lt;li&gt;..&lt;/li&gt;
-    &lt;li&gt;..&lt;/li&gt;        
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
+    &lt;li&gt;..&lt;/li&gt;
     &lt;li&gt;..&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
@@ -90,25 +102,43 @@ ul#scroll li {
   margin:0 20px 0 0;
   background-color:pink;
 }
+
+a.inactive {
+  display:none;
+}
     </pre>
   </div> 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
   <script>window.jQuery || document.write("<script src='assets/jquery.js'>\x3C/script>")</script>
   <script src="assets/js/jquery.easing.js"></script>
   <script src="../jquery.buffet.min.js"></script>
-  <script>
+  <script type="text/javascript">
+
     $(document).ready(function () {
-      $('.scroll').buffet({
+      $('#scroll').buffet({
         scroll_by : 2,
         speed     : 400,
         easing    : 'easeOutExpo',
-        next      : $('.container .next'),
-        prev      : $('.container .prev')
+        next      : $('#next'),
+        prev      : $('#prev')
       });
     });  
     
     prettyPrint();
     
+  </script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26192463-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
   </script>
 </body>
 </html>
