@@ -10,8 +10,7 @@ See it in action over here, [keighl.github.com/buffet](http://keighl.github.com/
 
 ```js
 $('#scroll').buffet({
-  scroll_by : 2,
-  speed     : 400,
+  scroll_by : 3,
   next      : $('#next'),
   prev      : $('#prev')
 });
@@ -79,7 +78,7 @@ a.inactive {
 * `speed`         - `400`
 * `easing`        - `"linear"`
 * `next`          - `null`
-* `prev`          - `null`              
+* `prev`          - `null`
 * `wrapper`       - `$(this).parent()`
 * `children`      - `$(this).children()`
 * `trim`          - `0` - the `margin-right` value on the last child element. Buffet will try to figure this out for you, but if you know the value, list is here
