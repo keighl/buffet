@@ -137,7 +137,7 @@
         var settings = {
           scroll_by         : 3,
           easing            : 'linear',
-          speed             : 300,
+          speed             : 400,
           next              : null,
           prev              : null,
           wrapper           : $(this).parent(),
@@ -145,16 +145,7 @@
           trim              : ($(this).children().size()) 
                               ? parseInt($(this).children().first().css('margin-right'), 10) 
                               : 0
-        };
-        
-        /*
-        * What is trim?
-        * A bit of right margin that can throw off the math behind this thing.
-        * Basically, we want the scroller to end flush with the right side of the last element.
-        * Since we calculate the width of the scrollable area from the width/margin of the first child,
-        * we'll need to subtract the "trim" regardless of whether or not the user removes the
-        * right margin on the last element
-        */        
+        };     
         
         if (options) { 
           $.extend(settings, options);
