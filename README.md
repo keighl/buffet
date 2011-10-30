@@ -85,8 +85,6 @@ a.inactive {
 
 ## Methods
 
-## Methods
-
 * init      - `$('#scroll).buffet({})`
 * destroy   - `$('#scroll).buffet('destroy')`
 * move      - `$('#scroll).buffet('move', DIRECTION)` - "prev" or "next"
