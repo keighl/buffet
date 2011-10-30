@@ -111,7 +111,7 @@ a.inactive {
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
   <script>window.jQuery || document.write("<script src='assets/jquery.js'>\x3C/script>")</script>
   <script src="assets/js/jquery.easing.js"></script>
-  <script src="jquery.buffet.min.js"></script>
+  <script src="jquery.buffet.js"></script>
   <script type="text/javascript">
 
     $(document).ready(function () {
@@ -120,7 +120,13 @@ a.inactive {
         speed     : 400,
         easing    : 'easeOutExpo',
         next      : $('#next'),
-        prev      : $('#prev')
+        prev      : $('#prev'),
+        before : function () {
+          console.log("before_" + this);
+        },
+        after : function () {
+          console.log("after_" + this);
+        }
       });
     });  
     

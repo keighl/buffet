@@ -83,9 +83,36 @@ a.inactive {
 * `children`      - `$(this).children()`
 * `trim`          - `0` - the `margin-right` value on the last child element. Buffet will try to figure this out for you, but if you know the value, list is here
 
+## Methods
+
+## Methods
+
+* init      - `$('#scroll).buffet({})`
+* destroy   - `$('#scroll).buffet('destroy')`
+* move      - `$('#scroll).buffet('move', DIRECTION)` - "prev" or "next"
+* next      - `$('#scroll).buffet('next')`
+* prev      - `$('#scroll).buffet('prev')`
+
+## Callbacks
+
+Buffet will fire optional callbacks before and after each transition.
+
+```js
+$('#scroll').buffet({
+  scroll_by : 3,
+  next      : $('#next'),
+  prev      : $('#prev'),
+  before    : function () {
+    // do stuff ...
+  },
+  after     : function () {
+    // do sutf ....
+  }
+});
+```
+
 ## TODO
 
-* Before/After callbacks
 * Recalculate on wrapper changes (responsive)
 * Infinite scrolling
 * Start right aligned (basically backwards)

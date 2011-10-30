@@ -3,7 +3,7 @@
  
  * Copyright (c) 2011 Kyle Truscott
  *
- * http://keighl.com
+ * http://keighl.github.com/buffet
  *
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -84,19 +84,42 @@
             }
             
           }
-          
-          console.log(pos);
-          
+                    
           
           /*
           * move it!
           */
-          
-          $(this).stop().animate({
-            left : pos
-          }, data.speed, data.easing, function () {
+
+          if (current_position !== pos) {
+
+            /*
+            * Fire before callback
+            */
+
+            if (typeof data.before === "function") {
+              data.before.call(this);
+            }
+
+            $(this).stop().animate({
+              left : pos
+            }, data.speed, data.easing, function () {
+              
+              /*
+              * Fire after callback
+              */
+
+              if (typeof data.after === "function") {
+                data.after.call(this);
+              }
+
+              data.is_moving = false;
+            });
+
+          } else {
+
             data.is_moving = false;
-          });
+
+          }
           
         }
         
@@ -140,6 +163,8 @@
           speed             : 400,
           next              : null,
           prev              : null,
+          before            : function () {},
+          after             : function () {},
           wrapper           : $(this).parent(),
           children          : $(this).children(),
           trim              : ($(this).children().size()) 
@@ -236,6 +261,11 @@
       return this.each(function () {
         
         var data = $(this).data('buffet');  
+
+        if (!data) {
+          return false;
+        }
+
         
         /*
         * Unbind prev / next events

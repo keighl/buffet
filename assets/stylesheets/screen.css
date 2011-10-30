@@ -454,12 +454,12 @@ table {
   background: url('../images/icons-secb955c53f.png') no-repeat;
 }
 
-/* line 60, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-button_next, a#next {
   background-position: 0 0;
 }
 
-/* line 60, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-button_prev, a#prev {
   background-position: 0 -40px;
 }
@@ -542,22 +542,23 @@ a.info {
   background-image: linear-gradient(top, #ee5f5b 0%, #c43c35 100%);
   color: #fff;
   border: 1px solid #c43c35;
+  font-size: 0.8em;
 }
-/* line 89, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 a.download:active,
 a.info:active {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-/* line 95, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 a.download:hover,
 a.info:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 a.info {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(100%, #eaeaea));
   background-image: -webkit-linear-gradient(top, #f7f7f7 0%, #eaeaea 100%);
@@ -570,7 +571,7 @@ a.info {
   text-shadow: none;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .demo_wrapper {
   margin-bottom: 40px;
   padding: 30px 0px;
@@ -579,12 +580,12 @@ a.info {
   border-bottom: 1px #666 solid;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .demo {
   position: relative;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 #scroll_mask {
   position: relative;
   overflow: hidden;
@@ -593,7 +594,7 @@ a.info {
   height: 140px;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 ul#scroll {
   margin: 0;
   padding: 0;
@@ -602,7 +603,7 @@ ul#scroll {
   width: 9999em;
   list-style-type: none;
 }
-/* line 141, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 ul#scroll li {
   margin: 0 20px 0 0;
   float: left;
@@ -611,7 +612,7 @@ ul#scroll li {
   background-color: #f7f7f7;
 }
 
-/* line 153, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 a#prev,
 a#next {
   width: 40px;
@@ -623,19 +624,19 @@ a#next {
   text-indent: -999em;
   cursor: pointer;
 }
-/* line 163, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 a#prev:hover,
 a#next:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
 }
-/* line 167, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 a#prev:active,
 a#next:active {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
-/* line 171, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 a#prev.inactive,
 a#next.inactive {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
@@ -643,17 +644,17 @@ a#next.inactive {
   cursor: arrow;
 }
 
-/* line 178, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 a#next {
   right: -30px;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 a#prev {
   left: -30px;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 pre.prettyprint {
   clear: both;
   margin-left: 2.041%;
@@ -669,7 +670,7 @@ pre.prettyprint {
   border: 1px #666 solid;
   margin-left: 0px;
 }
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 pre.prettyprint:last-child {
   margin-bottom: 40px;
 }
