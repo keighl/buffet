@@ -34,17 +34,17 @@ body {
   font-family:'Lucida Grande', sans-serif;
   border-top:5px solid #121212;
   @include linear-gradient(color-stops(#444, #323232 33%), top);
-  
+
 }
 
 a {
   color:#FFD48E;
   text-decoration:none;
-  
+
   &:hover {
-   color:#fff; 
+   color:#fff;
   }
-  
+
 }
 
 
@@ -59,7 +59,7 @@ h1 {
   display:block;
   text-align:center;
   font-size:8em;
-  
+  font-weight:normal;
 }
 
 h3 {
@@ -73,39 +73,36 @@ p {
   code {
 
   }
-  
-  
-  
+
+
+
 }
 
-a.download,
-a.info {
-  padding:0.3em 1em;
-  @include border-radius(4px);
-  @include linear-gradient(color-stops(#ee5f5b 0%, #c43c35 100%), top);
-  color:#fff;
-  border:1px solid #c43c35;
-  font-size:0.8em;
-  
-  &:active {
-    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); 
-  }
-  
-  &:hover {
-    @include opacity(0.9);
-     
-  }
-  
-}
+.download {
 
-a.info {
-  @include linear-gradient(color-stops(#f7f7f7 0%, #eaeaea 100%), top);
-  border:1px solid #fff;
-  color:#232323;
-  text-shadow:none;
-  
+  a,
+  a:link,
+  a:visited {
+    padding:0.5em 1em;
+    background-color:#ee5f5b;
+    @include border-radius(4px);
+    @include linear-gradient(color-stops(#ee5f5b 0%, #c43c35 100%), top);
+    color:#fff;
+    border:1px solid #c43c35;
+    font-size:1em;
+
+    &:active {
+      -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    &:hover {
+      @include opacity(0.9);
+      text-decoration:none;
+    }
+
+  }
 }
 
 .demo_wrapper {
@@ -114,8 +111,8 @@ a.info {
   background-color:#232323;
   border-top:1px #666 solid;
   border-bottom:1px #666 solid;
-  
-  
+
+
 }
 
 .demo {
@@ -138,16 +135,16 @@ ul#scroll {
   height:140px;
   width:9999em;
   list-style-type:none;
-  
+
   li {
     margin:0 20px 0 0;
     float:left;
     width:140px;
     height:140px;
     background-color:#f7f7f7;
-    
+
   }
-  
+
 }
 
 a#prev,
@@ -160,20 +157,20 @@ a#next {
   overflow:hidden;
   text-indent:-999em;
   cursor:pointer;
-  
+
   &:hover {
     @include opacity(0.9);
-  } 
-  
+  }
+
   &:active {
     @include opacity(0.6);
-  } 
-  
+  }
+
   &.inactive {
     @include opacity(0.1);
     cursor:arrow;
   }
-  
+
 }
 
 a#next {
@@ -193,15 +190,14 @@ pre.prettyprint {
   @include border-radius(8px);
    border:1px #666 solid;
    margin-left:0px;
-   
+
    &:last-child {
      margin-bottom:40px;
    }
-   
+
 }
 
 
 
 
 
-  
